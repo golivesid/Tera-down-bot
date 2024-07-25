@@ -24,7 +24,7 @@ load_dotenv('config.env', override=True)
 
 logging.basicConfig(level=logging.INFO)
 
-ADMINS = list(map(int, os.environ.get('ADMINS', '1352497419').split()))
+ADMINS = list(map(int, os.environ.get('ADMINS', '').split()))
 if not ADMINS:
     logging.error("ADMINS variable is missing! Exiting now")
     exit(1)
@@ -58,9 +58,9 @@ else:
     fsub_id = int(fsub_id)
 
 
-mongo_url = os.environ.get('MONGO_URL', 'mongodb+srv://tony:tera@tera.kr6muwi.mongodb.net/?retryWrites=true&w=majority&appName=tera')
+mongo_url = os.environ.get('MONGO_URL', '')
 client = MongoClient(mongo_url)
-db = client['tera']
+db = client['']
 users_collection = db['users']
 
 
