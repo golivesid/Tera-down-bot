@@ -60,7 +60,7 @@ else:
 
 mongo_url = os.environ.get('MONGO_URL', '')
 client = MongoClient(mongo_url)
-db = client['']
+db = client['tera']
 users_collection = db['users']
 
 
