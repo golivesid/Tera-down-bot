@@ -58,7 +58,7 @@ else:
     fsub_id = int(fsub_id)
 
 
-mongo_url = os.environ.get('MONGO_URL', '')
+mongo_url = os.environ.get('MONGO_URL', 'mongodb+srv://tony:tera@tera.kr6muwi.mongodb.net/?retryWrites=true&w=majority&appName=tera')
 client = MongoClient(mongo_url)
 db = client['tera']
 users_collection = db['users']
